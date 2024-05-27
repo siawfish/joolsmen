@@ -1,6 +1,7 @@
 import { Text, type TextProps, StyleSheet } from 'react-native';
 
 import { useThemeColor } from '@/hooks/useThemeColor';
+import { Colors } from '@/constants/Colors';
 
 export type ThemedTextProps = TextProps & {
   lightColor?: string;
@@ -36,30 +37,26 @@ export function ThemedText({
 const styles = StyleSheet.create({
   default: {
     fontSize: 16,
-    lineHeight: 24,
-    fontFamily: 'ChakraPetchLight',
+    fontFamily: 'Lato',
   },
   defaultSemiBold: {
     fontSize: 16,
-    lineHeight: 24,
     fontWeight: '600',
-    fontFamily: 'ChakraPetchSemiBold',
+    fontFamily: 'Rubik',
   },
   title: {
     fontSize: 32,
     fontWeight: 'bold',
-    lineHeight: 32,
-    fontFamily: 'ChakraPetchBold',
+    fontFamily: 'RubikBold',
   },
   subtitle: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 'bold',
-    fontFamily: 'ChakraPetchBold',
+    fontFamily: 'Lato',
   },
   link: {
-    lineHeight: 30,
     fontSize: 16,
-    color: '#0a7ea4',
-    fontFamily: 'ChakraPetchLightItalic',
+    color: Colors.light.primary,
+    fontFamily: 'LatoItalic',
   },
 });
