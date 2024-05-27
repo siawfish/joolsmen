@@ -13,7 +13,16 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+    ChakraPetchBold: require('../assets/fonts/Chakra_Petch/ChakraPetch-Bold.ttf'),
+    ChakraPetchBoldItalic: require('../assets/fonts/Chakra_Petch/ChakraPetch-BoldItalic.ttf'),
+    ChakraPetchItalic: require('../assets/fonts/Chakra_Petch/ChakraPetch-Italic.ttf'),
+    ChakraPetchLight: require('../assets/fonts/Chakra_Petch/ChakraPetch-Light.ttf'),
+    ChakraPetchLightItalic: require('../assets/fonts/Chakra_Petch/ChakraPetch-LightItalic.ttf'),
+    ChakraPetchMedium: require('../assets/fonts/Chakra_Petch/ChakraPetch-Medium.ttf'),
+    ChakraPetchMediumItalic: require('../assets/fonts/Chakra_Petch/ChakraPetch-MediumItalic.ttf'),
+    ChakraPetchRegular: require('../assets/fonts/Chakra_Petch/ChakraPetch-Regular.ttf'),
+    ChakraPetchSemiBold: require('../assets/fonts/Chakra_Petch/ChakraPetch-SemiBold.ttf'),
+    ChakraPetchSemiBoldItalic: require('../assets/fonts/Chakra_Petch/ChakraPetch-SemiBoldItalic.ttf'),
   });
 
   useEffect(() => {
@@ -28,8 +37,9 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack screenOptions={{headerShown: false}}>
+        {/* Your app's screens go here */}
+        <Stack.Screen name="(auth)" />
         <Stack.Screen name="+not-found" />
       </Stack>
     </ThemeProvider>
