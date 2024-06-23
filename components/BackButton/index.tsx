@@ -6,8 +6,8 @@ import { useThemeColor } from '@/hooks/useThemeColor'
 import { Colors } from '@/constants/Colors'
 
 interface BackButtonProps {
-    containerStyle?: ViewStyle
-    onPress?: () => void
+    readonly containerStyle?: ViewStyle
+    readonly onPress?: () => void
 }
 
 export default function BackButton({
@@ -17,7 +17,7 @@ export default function BackButton({
     const color = useThemeColor({
         light: Colors.dark.text,
         dark: Colors.dark.primary
-    }, 'background') as string;
+    }, 'background');
     return (
         <IconButton onPress={onPress} style={containerStyle}>
             <Feather name="chevron-left" size={24} color={color} />

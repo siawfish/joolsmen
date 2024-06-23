@@ -1,5 +1,5 @@
 import { Colors } from '@/constants/Colors';
-import { widthPixel } from '@/constants/normalize';
+import { fontPixel, widthPixel } from '@/constants/normalize';
 import React from 'react';
 import { StyleSheet, TextInput, TextInputProps, View, ViewStyle } from 'react-native';
 import { ThemedText } from '../ThemedText';
@@ -20,16 +20,17 @@ const InputField = ({
     containerStyle,
     clearButtonMode='while-editing',
     label,
-    labelStyle
+    labelStyle,
+    multiline=false
 }:PhoneInputProps) => {
     const backgroundColor = useThemeColor({
         light: Colors.light.inputBackground,
         dark: Colors.dark.inputBackground
-    }, 'inputBackground') as string;
+    }, 'inputBackground');
     const color = useThemeColor({
         light: Colors.light.text,
         dark: Colors.dark.text
-    }, 'text') as string;
+    }, 'text');
     return (
         <View style={[styles.container, containerStyle]}>
             {
@@ -38,7 +39,7 @@ const InputField = ({
                         type='default'
                         lightColor={Colors.light.subText} 
                         darkColor={Colors.dark.subText} 
-                        style={labelStyle}
+                        style={[styles.label, labelStyle]}
                     >
                         {label}
                     </ThemedText>
@@ -53,11 +54,14 @@ const InputField = ({
                     }, 
                     style
                 ]}
+                selectionColor={Colors.light.primary}
+                cursorColor={Colors.light.primary}
                 placeholder={placeholder}
                 keyboardType={keyboardType}
                 textContentType={textContentType}
                 maxLength={maxLength}
                 clearButtonMode={clearButtonMode}
+                multiline={multiline}
             />
         </View>
     );
@@ -77,6 +81,12 @@ const styles = StyleSheet.create({
         borderBottomWidth: 0.3,
         borderColor: Colors.light.primary
     },
+    label: {
+        fontSize: fontPixel(14),
+        fontFamily: 'Lato',
+        fontWeight: 'bold',
+        marginLeft: widthPixel(16)
+    }
 })
 
 export default InputField;

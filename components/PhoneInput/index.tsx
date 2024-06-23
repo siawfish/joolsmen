@@ -4,7 +4,6 @@ import React from 'react';
 import { StyleSheet, TextInput, TextInputProps, View, ViewStyle } from 'react-native';
 import { ThemedText } from '../ThemedText';
 import { useThemeColor } from '@/hooks/useThemeColor';
-// @ts-ignore
 import Ghana from '@/assets/svgs/ic_ghana.svg';
 
 interface PhoneInputProps extends TextInputProps {
@@ -25,11 +24,11 @@ const PhoneInput = ({
     const backgroundColor = useThemeColor({
         light: Colors.light.inputBackground,
         dark: Colors.dark.inputBackground
-    }, 'inputBackground') as string;
+    }, 'inputBackground');
     const color = useThemeColor({
         light: Colors.light.text,
         dark: Colors.dark.text
-    }, 'text') as string;
+    }, 'text');
     return (
         <View style={[styles.inputContainer, containerStyle]}>
             <View
@@ -58,6 +57,7 @@ const PhoneInput = ({
                     }, 
                     style
                 ]}
+                cursorColor={Colors.light.primary}
                 placeholder={placeholder}
                 keyboardType={keyboardType}
                 textContentType={textContentType}

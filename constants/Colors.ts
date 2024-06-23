@@ -16,8 +16,10 @@ export const Colors = {
     tabIconSelected: tintColorLight,
     subText: '#687076',
     primary: "#fcba03",
+    lightPrimary: "rgba(252, 186, 3, 0.1)",
     inputBackground: "#ffffff",
     navButtonBackground: "#151718",
+    grey: "#dbdbde",
   },
   dark: {
     text: '#ECEDEE',
@@ -28,7 +30,9 @@ export const Colors = {
     tabIconSelected: tintColorDark,
     subText: '#929292',
     primary: "#fcba03",
+    lightPrimary: "rgba(252, 186, 3, 0.1)",
     inputBackground: "#1a1a1a",
     navButtonBackground: "#000000",
+    grey: "#2b2b2b",
   },
 };

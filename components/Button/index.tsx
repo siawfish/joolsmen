@@ -19,11 +19,11 @@ const Button = ({
     const backgroundColor = useThemeColor({
         light: Colors.dark.background,
         dark: Colors.dark.primary
-    }, 'primary') as string;
+    }, 'primary');
     const color = useThemeColor({
         light: Colors.dark.text,
         dark: Colors.dark.background
-    }, 'text') as string;
+    }, 'text');
   return (
     <TouchableOpacity 
         onPress={onPress}

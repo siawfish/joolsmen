@@ -1,6 +1,6 @@
 import { StyleSheet, TouchableOpacity, TouchableOpacityProps } from 'react-native'
 import React from 'react'
-import { heightPixel, widthPixel } from '@/constants/normalize';
+import { widthPixel } from '@/constants/normalize';
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { Colors } from '@/constants/Colors';
 
@@ -16,7 +16,7 @@ const IconButton = ({
     const backgroundColor = useThemeColor({
         light: Colors.light.navButtonBackground,
         dark: Colors.dark.navButtonBackground
-    }, 'background') as string;
+    }, 'background');
     return (
         <TouchableOpacity 
             style={[styles.container, {backgroundColor}, style]}
