@@ -4,8 +4,6 @@ import { ThemedText } from '../ThemedText';
 import { fontPixel, heightPixel, widthPixel } from '@/constants/normalize';
 import { Colors } from '@/constants/Colors';
 import { MaterialIcons } from '@expo/vector-icons';
-import AddSkill from './components/AddSkill';
-import AddCostItem from './components/AddCostitem';
 
 const RegisterSkills = () => {
     return (

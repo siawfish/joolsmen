@@ -36,6 +36,7 @@ const Button = ({
         ]}
     >
         <ThemedText 
+            type='defaultSemiBold'
             style={[
                 labelStyle,
                 {
@@ -56,7 +57,7 @@ const styles = StyleSheet.create({
     height: heightPixel(48),
     alignItems: 'center',
     marginHorizontal: widthPixel(16),
-    borderRadius: widthPixel(4),
+    borderRadius: widthPixel(10),
   }
 })
 

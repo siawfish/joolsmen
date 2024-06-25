@@ -1,5 +1,5 @@
 import React, { useCallback, useRef } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet } from "react-native";
 import BottomSheet, { BottomSheetView } from "@gorhom/bottom-sheet";
 import { useThemeColor } from "@/hooks/useThemeColor";
 import { Colors } from "@/constants/Colors";
@@ -20,6 +20,13 @@ const AddSkill = () => {
     {
       light: Colors.light.subText,
       dark: Colors.light.primary,
+    },
+    "background"
+  );
+  const inputBackgroundColor = useThemeColor(
+    {
+      light: Colors.light.background,
+      dark: Colors.dark.navButtonBackground,
     },
     "background"
   );
@@ -50,8 +57,9 @@ const AddSkill = () => {
             Add A Skill
         </ThemedText>
         <InputField
-            label='Skill Name'
-            placeholder='Enter the name of the skill'
+          label='Skill Name'
+          placeholder='Enter the name of the skill'
+          style={{ backgroundColor: inputBackgroundColor }}
         />
 
         <CostBreakdown />

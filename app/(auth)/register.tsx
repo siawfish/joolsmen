@@ -7,6 +7,8 @@ import ProgressBar from '@/components/ProgressBar'
 import ProofOfIdentify from '@/components/ProofOfIdentify'
 import RegisterSkills from '@/components/RegisterSkills'
 import AddSkill from '@/components/RegisterSkills/components/AddSkill'
+import BasicInformation from '@/components/BasicInformation'
+import Success from '@/components/Success'
 
 const Register = () => {
   return (
@@ -22,7 +24,8 @@ const Register = () => {
         onPress={() => {}}
         style={styles.btn}
       />
-      <AddSkill />
+      {/* <AddSkill /> */}
+      <Success />
     </ThemedSafeAreaView>
   )
 }
