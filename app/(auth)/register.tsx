@@ -9,6 +9,7 @@ import RegisterSkills from '@/components/RegisterSkills'
 import AddSkill from '@/components/RegisterSkills/components/AddSkill'
 import BasicInformation from '@/components/BasicInformation'
 import Success from '@/components/Success'
+import { router } from 'expo-router'
 
 const Register = () => {
   return (
@@ -21,11 +22,11 @@ const Register = () => {
       <RegisterSkills />
       <Button 
         label='Continue'
-        onPress={() => {}}
+        onPress={() => router.push('(tabs)')}
         style={styles.btn}
       />
       {/* <AddSkill /> */}
-      <Success />
+      {/* <Success /> */}
     </ThemedSafeAreaView>
   )
 }

@@ -20,6 +20,8 @@ export const Colors = {
     inputBackground: "#ffffff",
     navButtonBackground: "#151718",
     grey: "#dbdbde",
+    green: "#34d39a",
+    purple: "#818bf8",
   },
   dark: {
     text: '#ECEDEE',
@@ -34,5 +36,7 @@ export const Colors = {
     inputBackground: "#1a1a1a",
     navButtonBackground: "#000000",
     grey: "#2b2b2b",
+    green: "#34d39a",
+    purple: "#818bf8",
   },
 };
