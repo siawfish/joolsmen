@@ -3,6 +3,7 @@ import React from 'react'
 import { ThemedText } from '../ThemedText';
 import { fontPixel, heightPixel, widthPixel } from '@/constants/normalize';
 import { Colors } from '@/constants/Colors';
+import { useThemeColor } from '@/hooks/useThemeColor';
 
 interface EventCardProps {
     readonly startTime?: string;
@@ -15,6 +16,8 @@ const EventCard = ({
     endTime = '11:00 AM',
     title = 'Plumbing working with Kofi Siaw'
 } : EventCardProps) => {
+    const backgroundColor = useThemeColor({ light: Colors.light.lightPrimary, dark: Colors.dark.lightPrimary }, 'text');
+
   return (
     <View style={styles.eventCard}>
         <View style={styles.timestampContainer}>
@@ -25,7 +28,7 @@ const EventCard = ({
                 {endTime}
             </ThemedText>
         </View>
-        <View style={styles.eventContainer}>
+        <View style={[styles.eventContainer, {backgroundColor}]}>
             <View style={styles.eventBorder}>
                 <ThemedText style={styles.event} type='title'>
                     {title}
@@ -67,7 +70,6 @@ const styles = StyleSheet.create({
     },
     eventContainer: {
         flexDirection: 'column',
-        backgroundColor: Colors.light.lightPrimary,
         paddingVertical: heightPixel(20),
         paddingHorizontal: widthPixel(16),
         flex: 1,

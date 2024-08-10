@@ -46,6 +46,6 @@ const styles = StyleSheet.create({
         height: widthPixel(60),
     },
     pinCodeTextStyle: {
-        fontFamily: 'Rubik',
+        fontFamily: 'Bold',
     }
 })

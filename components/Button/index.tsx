@@ -8,13 +8,15 @@ import { Colors } from '@/constants/Colors';
 interface ButtonProps extends TouchableOpacityProps {
   labelStyle?: TextStyle;
   label?: string;
+  icon?: React.ReactNode;
 }
 
 const Button = ({
     style,
     labelStyle,
     label='Button',
-    onPress
+    onPress,
+    icon
 }:ButtonProps) => {
     const backgroundColor = useThemeColor({
         light: Colors.dark.background,
@@ -35,13 +37,14 @@ const Button = ({
             style
         ]}
     >
+        {icon}
         <ThemedText 
             type='defaultSemiBold'
             style={[
-                labelStyle,
                 {
                     color
-                }
+                },
+                labelStyle
             ]}
         >
             {label}
@@ -58,6 +61,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginHorizontal: widthPixel(16),
     borderRadius: widthPixel(10),
+    flexDirection: 'row',
+    gap: widthPixel(10)
   }
 })
 

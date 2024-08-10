@@ -13,10 +13,15 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
-    Lato: require('../assets/fonts/Lato/Lato-Regular.ttf'),
-    RubikBold: require('../assets/fonts/Rubik/Rubik-SemiBold.ttf'),
-    Rubik: require('../assets/fonts/Rubik/Rubik-Light.ttf'),
-    LatoItalic: require('../assets/fonts/Lato/Lato-Italic.ttf'),
+    Bold: require('../assets/fonts/SF_Compact_Rounded/SF_Compact_Rounded_Bold.ttf'),
+    Medium: require('../assets/fonts/SF_Compact_Rounded/SF_Compact_Rounded_Medium.ttf'),
+    Regular: require('../assets/fonts/SF_Pro/SF-Pro-Display-Regular.otf'),
+    Light: require('../assets/fonts/SF_Pro/SF-Pro-Display-Regular.otf'),
+    Heavy: require('../assets/fonts/SF_Pro/SF-Pro-Display-Heavy.otf'),
+    SemiBold: require('../assets/fonts/SF_Compact_Rounded/SF_Compact_Rounded_Semibold.ttf'),
+    Italic: require('../assets/fonts/SF_Compact_Rounded/SF_Compact_Text_Bold_Italic.ttf'),
+    Thin: require('../assets/fonts/SF_Compact_Rounded/SF_Compact_Rounded_Thin.ttf'),
+    UltraLight: require('../assets/fonts/SF_Compact_Rounded/SF_Compact_Rounded_Ultralight.ttf'),
   });
 
   useEffect(() => {

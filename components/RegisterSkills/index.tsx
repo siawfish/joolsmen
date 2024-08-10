@@ -4,8 +4,10 @@ import { ThemedText } from '../ThemedText';
 import { fontPixel, heightPixel, widthPixel } from '@/constants/normalize';
 import { Colors } from '@/constants/Colors';
 import { MaterialIcons } from '@expo/vector-icons';
+import { useThemeColor } from '@/hooks/useThemeColor';
 
 const RegisterSkills = () => {
+    const backgroundColor = useThemeColor({ light: Colors.light.lightPrimary, dark: Colors.dark.lightPrimary }, 'text');
     return (
         <ScrollView contentContainerStyle={{height: '100%'}}>
             <View
@@ -28,7 +30,7 @@ const RegisterSkills = () => {
             </View>
 
             <View style={styles?.gap}>
-                <TouchableOpacity style={styles.card}>
+                <TouchableOpacity style={[styles.card, {backgroundColor}]}>
                     <MaterialIcons name="add" size={24} color={Colors.light.primary} />
                 </TouchableOpacity>
             </View>
@@ -62,7 +64,6 @@ const styles = StyleSheet.create({
         borderRadius: widthPixel(10),
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: Colors.light.lightPrimary,
         marginHorizontal: widthPixel(16),
     }
 })

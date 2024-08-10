@@ -2,6 +2,7 @@ import { Text, type TextProps, StyleSheet } from 'react-native';
 
 import { useThemeColor } from '@/hooks/useThemeColor';
 import { Colors } from '@/constants/Colors';
+import { fontPixel } from '@/constants/normalize';
 
 export type ThemedTextProps = TextProps & {
   lightColor?: string;
@@ -36,27 +37,25 @@ export function ThemedText({
 
 const styles = StyleSheet.create({
   default: {
-    fontSize: 16,
-    fontFamily: 'Lato',
+    fontSize: fontPixel(16),
+    fontFamily: 'Regular',
   },
   defaultSemiBold: {
-    fontSize: 16,
-    fontWeight: '600',
-    fontFamily: 'Rubik',
+    fontSize: fontPixel(16),
+    fontFamily: 'SemiBold',
   },
   title: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    fontFamily: 'RubikBold',
+    fontSize: fontPixel(32),
+    fontFamily: 'Bold',
   },
   subtitle: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    fontFamily: 'Lato',
+    fontSize: fontPixel(18),
+    fontFamily: 'Regular',
+    fontWeight: 400,
   },
   link: {
-    fontSize: 16,
+    fontSize: fontPixel(16),
     color: Colors.light.primary,
-    fontFamily: 'LatoItalic',
+    fontFamily: 'Italic',
   },
 });

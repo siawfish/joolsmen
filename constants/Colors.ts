@@ -16,7 +16,7 @@ export const Colors = {
     tabIconSelected: tintColorLight,
     subText: '#687076',
     primary: "#fcba03",
-    lightPrimary: "rgba(252, 186, 3, 0.1)",
+    lightPrimary: "#fffcdc",
     inputBackground: "#ffffff",
     navButtonBackground: "#151718",
     grey: "#dbdbde",

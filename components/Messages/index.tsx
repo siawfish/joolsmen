@@ -1,21 +1,16 @@
 import { StyleSheet, Image, View } from 'react-native'
 import React from 'react'
 import { ThemedView } from '../ThemedView';
-import { heightPixel, widthPixel } from '@/constants/normalize';
+import { fontPixel, heightPixel, widthPixel } from '@/constants/normalize';
 import { Colors } from '@/constants/Colors';
 import SectionTitle from '../SectionTitle';
-import { useThemeColor } from '@/hooks/useThemeColor';
 import Card from './components/Card';
 import Button from '../Button';
-import messagesIcon from "@/assets/images/chatting.png";
+import messagesIcon from "@/assets/images/message.png";
+import { Link } from 'expo-router';
+import { ThemedText } from '../ThemedText';
 
 const Messages = () => {
-
-    const color = useThemeColor({
-        light: Colors.light.text,
-        dark: Colors.dark.text
-    }, 'text');
-
     return (
         <ThemedView 
             style={styles.container}
@@ -31,10 +26,14 @@ const Messages = () => {
             </View>
             <Card />
             <Card read={false} />
-            <Button 
-                label='View All' 
-                style={styles.button}
-            />
+            <Link style={styles.button} href="#">
+                <ThemedText 
+                    type='link'
+                    style={{color: Colors.light.primary}}
+                >
+                    View All 
+                </ThemedText>
+            </Link>
         </ThemedView>
     )
 }
@@ -60,7 +59,9 @@ const styles = StyleSheet.create({
     },
     button: {
         marginHorizontal: 0,
-        marginTop: heightPixel(16)
+        marginTop: heightPixel(10),
+        fontSize: fontPixel(14),
+        alignSelf: 'flex-end',
     },
     icon: {
         width: widthPixel(30),

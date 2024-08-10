@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet, View, Image } from 'react-native'
 import React from 'react'
 import { ThemedView } from '../ThemedView'
 import { fontPixel, heightPixel, widthPixel } from '@/constants/normalize'
@@ -18,7 +18,7 @@ export default function ProfileCard() {
         <View style={styles.detailsContainer}>
             <Image
                 source={user}
-                style={{ width: widthPixel(65), height: widthPixel(65) }}
+                style={styles.img}
             />
             <View style={styles.details}>
                 <ThemedText type='title' style={styles.name}>John Doe</ThemedText>
@@ -110,5 +110,10 @@ const styles = StyleSheet.create({
     },
     marginTop: {
         marginTop: heightPixel(5),
+    },
+    img: { 
+        width: widthPixel(65), 
+        height: widthPixel(65),
+        borderRadius: widthPixel(65/2),
     }
 })

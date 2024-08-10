@@ -99,11 +99,11 @@ const styles = StyleSheet.create({
     },
     businessType: {
         fontSize: fontPixel(16),
-        fontFamily: 'Lato',
+        fontFamily: 'Regular',
     },
     caption: {
         fontSize: fontPixel(12),
-        fontFamily: 'Lato',
+        fontFamily: 'Regular',
         color: Colors.light.subText,
     },
     textContainer: {

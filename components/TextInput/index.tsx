@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import { StyleSheet, TextInput, TextInputProps, View, ViewStyle, Animated, Easing } from 'react-native';
 import { ThemedText } from '../ThemedText';
 import { useThemeColor } from '@/hooks/useThemeColor';
@@ -101,14 +101,13 @@ const styles = StyleSheet.create({
     },
     input: {
         fontSize: widthPixel(18),
-        fontFamily: 'Lato',
+        fontFamily: 'Light',
         padding: widthPixel(16),
         borderColor: Colors.light.primary
     },
     label: {
         fontSize: fontPixel(14),
-        fontFamily: 'Lato',
-        fontWeight: 'bold',
+        fontFamily: 'SemiBold',
         marginLeft: widthPixel(16)
     }
 });

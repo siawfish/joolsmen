@@ -14,14 +14,17 @@ interface SectionTitleProps {
 const SectionTitle = ({
     title="Upcoming Bookings",
     subtitle="Your bookings today",
-    icon
+    icon=<Image source={calendarIcon} style={styles.icon} />
 } : SectionTitleProps) => {
     return (
         <View style={styles.titleContainer}>
-            {icon ?? <Image source={calendarIcon} style={styles.icon} />}
+            {icon}
             <View style={styles.titleContent}>
                 <ThemedText lightColor={Colors.light.text} darkColor={Colors.dark.text} style={styles.title} type="title">{title}</ThemedText>
-                <ThemedText lightColor={Colors.light.subText} darkColor={Colors.dark.subText} style={styles.subtitle} type="subtitle">{subtitle}</ThemedText>
+                {
+                    !!subtitle && 
+                    <ThemedText lightColor={Colors.light.subText} darkColor={Colors.dark.subText} style={styles.subtitle} type="subtitle">{subtitle}</ThemedText>
+                }
             </View>
         </View>
     )

@@ -47,8 +47,7 @@ const styles = StyleSheet.create({
     },
     label: {
         fontSize: fontPixel(14),
-        fontFamily: 'Lato',
-        fontWeight: 'bold',
+        fontFamily: 'SemiBold',
     },
     row: {
         flexDirection: 'row',

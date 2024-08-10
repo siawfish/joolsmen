@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
         width: widthPixel(50),
         height: widthPixel(50),
         borderRadius: widthPixel(8),
-        backgroundColor: Colors.light.lightPrimary,
+        backgroundColor: Colors.light.grey,
     },
     contentContainer: {
         flex: 1,
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.light.primary,
     },
     unread: {
-        backgroundColor: Colors.light.lightPrimary,
+        backgroundColor: Colors.light.grey,
         width: widthPixel(8),
         height: widthPixel(8),
         borderRadius: widthPixel(4),

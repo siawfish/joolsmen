@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     },
     input: {
         fontSize: widthPixel(18),
-        fontFamily: 'Lato',
+        fontFamily: 'Regular',
         paddingVertical: widthPixel(16),
         paddingLeft: widthPixel(105),
         borderColor: Colors.light.primary,
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
     },
     prefixText: {
         fontSize: widthPixel(18),
-        fontFamily: 'Lato',
+        fontFamily: 'Regular',
         marginLeft: widthPixel(8),
     },
 });
