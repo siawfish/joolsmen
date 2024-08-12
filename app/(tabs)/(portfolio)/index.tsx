@@ -1,5 +1,4 @@
 import { StyleSheet, Image, View } from 'react-native';
-import { ThemedText } from '@/components/ThemedText';
 import { ThemedSafeAreaView } from '@/components/ThemedSafeAreaView';
 import { heightPixel, widthPixel } from '@/constants/normalize';
 import ProfileCard from '@/components/ProfileCard';
@@ -12,16 +11,25 @@ import { useThemeColor } from '@/hooks/useThemeColor';
 import { Colors } from '@/constants/Colors';
 import { Link } from 'expo-router';
 import Portfolio from '@/components/Portfolio';
+import { MaterialIcons } from '@expo/vector-icons';
 
 export default function Portfolios() {
   const labelColor = useThemeColor({
     light: Colors.light.text,
     dark: Colors.dark.text
   }, 'primary');
+  const iconColor = useThemeColor({
+    light: Colors.light.text,
+    dark: Colors.dark.primary
+  }, 'primary');
   const borderColor = useThemeColor({
     light: Colors.light.text,
     dark: Colors.dark.text
   }, 'primary');
+  const backgroundColor = useThemeColor({
+    light: Colors.light.inputBackground,
+    dark: Colors.dark.navButtonBackground
+  }, 'background');
   return (
     <ThemedSafeAreaView 
       style={styles.containerStyle}
@@ -35,7 +43,18 @@ export default function Portfolios() {
             title="Your works" 
             subtitle='Add your works to showcase your skills'
             icon={<Image source={portfolio} style={{ width: widthPixel(30), height: widthPixel(30) }} />}
-          />
+          >
+            <Link href="add" asChild>
+              <Button 
+                style={{
+                  ...styles.smallBtn,
+                  backgroundColor,
+                }}
+              >
+                <MaterialIcons name="playlist-add" size={24} color={iconColor} />
+              </Button>
+            </Link>
+          </SectionTitle>
         </View>}
         data={[1,2]}
         ListEmptyComponent={<EmptyList>
@@ -78,5 +97,12 @@ const styles = StyleSheet.create({
   listContainer: {
     paddingHorizontal: widthPixel(16),
     paddingBottom: heightPixel(100),
+  },
+  smallBtn: {
+    width: widthPixel(40),
+    height: widthPixel(40),
+    borderRadius: widthPixel(10),
+    borderWidth: 1,
+    marginHorizontal: widthPixel(0),
   }
 });

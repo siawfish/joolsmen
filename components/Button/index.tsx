@@ -9,6 +9,7 @@ interface ButtonProps extends TouchableOpacityProps {
   labelStyle?: TextStyle;
   label?: string;
   icon?: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const Button = ({
@@ -16,7 +17,8 @@ const Button = ({
     labelStyle,
     label='Button',
     onPress,
-    icon
+    icon,
+    children
 }:ButtonProps) => {
     const backgroundColor = useThemeColor({
         light: Colors.dark.background,
@@ -38,17 +40,20 @@ const Button = ({
         ]}
     >
         {icon}
-        <ThemedText 
-            type='defaultSemiBold'
-            style={[
-                {
-                    color
-                },
-                labelStyle
-            ]}
-        >
-            {label}
-        </ThemedText>
+        {children ? 
+            children :
+            <ThemedText 
+                type='defaultSemiBold'
+                style={[
+                    {
+                        color
+                    },
+                    labelStyle
+                ]}
+            >
+                {label}
+            </ThemedText>
+        }
     </TouchableOpacity>
   )
 }

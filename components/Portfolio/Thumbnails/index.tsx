@@ -25,7 +25,7 @@ const Thumbnails = ({
                 <CustomImage 
                     source={data?.[0]?.uri}
                     width='100%'
-                    height={heightPixel(300)}
+                    height='100%'
                     onPress={() => onPress?.(data?.[0]?.id as string)}
                 />
             }
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-evenly",
         gap: 3,
-        borderRadius: 5,
+        borderRadius: 10,
         overflow: "hidden",
         marginVertical: heightPixel(10),
     },
