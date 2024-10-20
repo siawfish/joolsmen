@@ -5,7 +5,7 @@ import { Colors } from '@/constants/Colors'
 import { heightPixel, widthPixel } from '@/constants/normalize'
 import user from "@/assets/images/individual.png";
 import { ThemedText } from '../ThemedText'
-import Thumbnails from './Thumbnails'
+import Thumbnails from '../Thumbnails'
 import { Media, MediaType } from '@/types'
 import Actions from './Actions'
 

@@ -15,3 +15,18 @@ export interface Media {
     height?: number;
     type?: MediaType;
 }
+
+export enum BookingStatuses {
+    PENDING = "PENDING",
+    ACCEPTED = "ACCEPTED",
+    DECLINED = "DECLINED",
+    ONGOING = "ONGOING",
+    CANCELLED = "CANCELLED",
+    COMPLETED = "COMPLETED",
+    PAUSED = "PAUSED",
+}
+export interface StatusColors {
+    color: string;
+    backgroundColor: string;
+}
+

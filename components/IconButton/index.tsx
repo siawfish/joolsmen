@@ -6,16 +6,20 @@ import { Colors } from '@/constants/Colors';
 
 interface IconButtonProps extends TouchableOpacityProps {
     children: React.ReactNode;
+    lightColor?: string;
+    darkColor?: string;
 }
 
 const IconButton = ({
     onPress,
     children,
-    style
+    style,
+    lightColor,
+    darkColor,
 }: IconButtonProps) => {
     const backgroundColor = useThemeColor({
-        light: Colors.light.navButtonBackground,
-        dark: Colors.dark.navButtonBackground
+        light: lightColor ?? Colors.light.navButtonBackground,
+        dark: darkColor ?? Colors.dark.navButtonBackground
     }, 'background');
     return (
         <TouchableOpacity 

@@ -3,6 +3,8 @@
  * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
  */
 
+import { blue } from "react-native-reanimated/lib/typescript/reanimated2/Colors";
+
 const tintColorLight = '#0a7ea4';
 const tintColorDark = '#fff';
 
@@ -20,8 +22,11 @@ export const Colors = {
     inputBackground: "#ffffff",
     navButtonBackground: "#151718",
     grey: "#dbdbde",
-    green: "#34d39a",
+    green: "#1cc83a",
+    blue: "#2196f3",
     purple: "#818bf8",
+    danger: "#ff0000",
+    dangerBackground: "#FCE4E4",
   },
   dark: {
     text: '#ECEDEE',
@@ -36,7 +41,10 @@ export const Colors = {
     inputBackground: "#1a1a1a",
     navButtonBackground: "#000000",
     grey: "#2b2b2b",
-    green: "#34d39a",
+    green: "#1cc83a",
     purple: "#818bf8",
+    blue: "#2196f3",
+    danger: "#ff0000",
+    dangerBackground: "#FCE4E4",
   },
 };
